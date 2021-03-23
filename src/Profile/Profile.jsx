@@ -1,21 +1,20 @@
 import React from 'react'
 import PropTypes from "prop-types";
 
-export default function Profile( {FullName, Profession, Bio , handleName})
+export default function Profile( {FullName, Profession, Bio , handleName, children})
 {
     return (
 <div> 
 <h1 style={{color:"#5D9FA4"} }>  My full Name is: {FullName} </h1>
 <h3 style={{color:"olive"} }>   My Profession is: {Profession}  </h3>
-<h3 style={{color:"darkblue"} }> A litlle about me: {Bio} </h3>
+<h3 style={{color:"darkblue"}}> A litlle about me: {Bio} </h3>
+{children}
 
 <button onClick={handleName} style={{marginTop:"30px",backgroundColor:"lightblue",fontSize:"large",fontWeight:"bold" , margin: "10px"}}> Check the user's Name</button>
 </div>
         
     )
 }
-
-
 
 Profile.propType={
     FullName: PropTypes.string,
